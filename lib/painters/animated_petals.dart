@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'dart:math' as math;
 
-const _PETAL_COUNT = 10;
+const petalCount = 10;
 
 class AnimatedPetalsPainter extends CustomPainter {
   AnimatedPetalsPainter({required AnimationController growth})
@@ -37,9 +37,9 @@ class AnimatedPetalsPainter extends CustomPainter {
         ..strokeWidth = 25,
     );
 
-    const sweepAngleDiff = math.pi / (_PETAL_COUNT - 1);
+    const sweepAngleDiff = math.pi / (petalCount - 1);
 
-    for (int i = 0; i < _PETAL_COUNT; i++) {
+    for (int i = 0; i < petalCount; i++) {
       final angle = (math.pi / 2) + (i * sweepAngleDiff);
       canvas.save();
       canvas.rotate(angle);
